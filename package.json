@@ -1,0 +1,28 @@
+{
+  "name": "spongebobquiz2",
+  "version": "1.0.0",
+  "description": "Which Spongebob character are you?",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/virgili23/spongebobquiz2.git"
+  },
+  "keywords": [
+    "spongebob",
+    "virgil"
+  ],
+  "author": "Virgilio Baez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/virgili23/spongebobquiz2/issues"
+  },
+  "homepage": "https://github.com/virgili23/spongebobquiz2#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  }
+}
