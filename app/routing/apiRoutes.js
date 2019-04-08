@@ -17,6 +17,52 @@ module.exports = function(app) {
         // sum the array
         // compare with values is closest to a character
         // then display that character
-    })
+        var bestMatch = {
+            name: "",
+            photo: "",
+            difference: 1000
+        };
+
+        console.log(req.body);
+
+        // Take the result of user's post and parse it
+
+        var userData = req.body;
+        var userScores = userData.scores;
+
+        console.log(userScores);
+
+        // Calculate the difference between the user's scores and characters'
+
+        var totalDifference = 0;
+
+
+        // Loop through all characters' possibilities in the Database.
+        for (var i=0; i < characters.length; i++) {
+
+            console.log(characters[i]);
+            totalDifference = 0;
+
+            // Then loop through all the scores on each character
+            for (var j=0; j < characters[i].scores[j]; j++) {
+
+                // Difference between the scores and sum them into the totalDifference
+                totalDifference = totalDifference + Math.abs(parseInt(userScores[j]) - parseInt(characters[i].scores[j]));
+
+                // If the sum of differences is less than the differences of the current best match
+                if (totalDifference <= bestMatch.difference) {
+                    // Reset the bestMatch to be the new character
+                    bestMatch.name = characters[i].name;
+                    bestMatch.photo = characters[i].photo;
+                    bestMatch.difference = totalDifference;
+                }
+            }
+        }
+
+        characters.push(userData);
+        console.log(bestMatch);
+
+        res.json(bestMatch);
+    });
 
 }

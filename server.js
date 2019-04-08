@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var path = require('path');
 
 var PORT = process.env.PORT || 3000;
 
@@ -8,10 +9,11 @@ var PORT = process.env.PORT || 3000;
 // app.use(bodyParser.json());
 
 // create application/json parser
-var jsonParser = bodyParser.json()
+// var jsonParser = bodyParser.json()
  
 // create application/x-www-form-urlencoded parser
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
+// var urlencodedParser = bodyParser.urlencoded({ extended: false })
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
 // parse various different custom JSON types as JSON
