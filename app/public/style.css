@@ -1,0 +1,34 @@
+.main, .jingle {
+    text-align: center;
+}
+.btn {
+    justify-content: space-around;
+    color: #333;
+    background: yellow;
+    border: 3px blue solid;
+}
+
+p a {
+    position: absolute;
+    background: white;
+    padding: 0.5% 1%;
+    border-radius: 5%;
+    border: 3px gray solid;
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    -webkit-justify-content: center; /* Safari 6.1+ */
+    /* justify-content: space-between; */
+    top: 90%;
+}
+
+*{
+    text-align: center;
+    /* overflow-x: hidden; */
+}
+
+body {
+    background-image: url("./images/jellyfield.png");
+}
+.jumbotron {
+    background: transparent;
+}

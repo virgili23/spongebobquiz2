@@ -1,4 +1,5 @@
 var path = require('path');
+
 // var characters = require("../data/characters.js");
 
 module.exports = function(app) {
@@ -15,5 +16,10 @@ module.exports = function(app) {
     // If no pre-determined route, default to home page
     app.use(function(req, res) {
         res.sendFile(path.join(__dirname + "/../public/home.html"));
+        // res.sendFile(path.join(__dirname + "/../public/home/home.html"));   
     });
 };
+
+
+// Instead of delivering a single File, let's find a way to deliver an entire Folder using each Route
+// We can make two style.css files for each page in order to achieve this.

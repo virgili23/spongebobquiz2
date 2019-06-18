@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tables Page</title>
+  <title>Spongebob Quiz</title>
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -13,23 +13,91 @@
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Shanti" rel="stylesheet">
+  <!-- Quicksand -->
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500&display=swap" rel="stylesheet">
+
+  <style>
+      * {
+        font-family: 'Quicksand';
+      }
+
+      .main, .jingle {
+        text-align: center;
+    }
+
+.main-section {
+    margin-top: 20vh;
+    box-shadow: 1px 1px 5px #333;
+    background: #FFEE7A;
+}
+.btn {
+    justify-content: space-around;
+    color: #333;
+    background: white;
+    border: 3px #D492F6 solid;
+}
+.btn:hover{
+    /* background: greenyellow;
+    border: 3px greenyellow solid; */
+    background: #35D9DB;
+    border: 3px #3671BF solid;
+}
+
+p a {
+    color: #333;
+    position: absolute;
+    background: white;
+    padding: 0.5% 1%;
+    border-radius: 5%;
+    border: 3px gray solid;
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    -webkit-justify-content: center; /* Safari 6.1+ */
+    /* justify-content: space-between; */
+    top: 90%;
+    box-shadow: 1px 1px 5px #333;
+    text-decoration: none;
+}
+p a:hover {
+    transition-delay: 3s ease;
+    text-decoration: none;
+    background: gray;
+    color: white;
+}
+
+*{
+    text-align: center;
+    /* overflow-x: hidden; */
+}
+
+body {
+    background-image: url("https://imgur.com/NU2Dcc0.png");
+    /* background: lightblue; */
+    color: darkslategrey;
+    font-family: 'Shanti', sans-serif;
+}
+
+  
+  </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="jumbotron">
-        <h1 class=""><i class="fa fa-facebook-square" aria-hidden="true"></i> Which Spongebob Character Are You?</h1>
-        <hr>
-        <h2 class="">Answer a few basic questions</h2>
-        <h2 class="">Then find the friend with the greatest compatibility</h2>
+    <div class="jumbotron main-section">
+        <h1 class="main">Which Spongebob Character Are You?</h1>
+        <br>
+        <h2 class="jingle">are ye ready, kids?</h2>
         <br>
 
         <div class="">
             <a href="/survey"> <!-- survey route -->
-                <button type="button" class="btn btn-primary btn-lg">
+                <button type="button" class="btn btn-primary btn-lg" id="takeQuiz">
                     <h4>
                     <span class="glyphicon glyphicon-list-alt"></span>
-                    Go to Survey
+                    Aye, Aye, Captain!
                     </h4>
                 </button>
             </a>
@@ -38,7 +106,7 @@
 
     <div class="footer">
         <div class="container">
-            <p><a href="#">API Friends List</a> | <a href="https://github.com/virgili23/spongebobquiz2" target="_blank">Github Repo</a></p>
+            <p><a href="https://github.com/virgili23/spongebobquiz2" target="_blank">Github Repo</a></p>
         </div>
     </div>
 </div>

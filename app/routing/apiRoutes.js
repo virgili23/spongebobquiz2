@@ -21,6 +21,8 @@ module.exports = function(app) {
             name: "",
             photo: "",
             difference: 1000
+            ///// changes made here:
+            ,desc: ""
         };
 
         console.log(req.body);
@@ -47,15 +49,17 @@ module.exports = function(app) {
             for (var j=0; j < characters[i].scores[j]; j++) {
 
                 // Difference between the scores and sum them into the totalDifference
-                totalDifference = totalDifference + Math.abs(parseInt(userScores[j]) - parseInt(characters[i].scores[j]));
+                totalDifference += Math.abs(parseInt(userScores[j]) - parseInt(characters[i].scores[j]));
 
                 // If the sum of differences is less than the differences of the current best match
                 if (totalDifference <= bestMatch.difference) {
                     // Reset the bestMatch to be the new character
                     bestMatch.name = characters[i].name;
                     bestMatch.photo = characters[i].photo;
+                    ///// changes made here:
+                    bestMatch.desc = characters[i].desc;
                     bestMatch.difference = totalDifference;
-                }
+                } 
             }
         }
 

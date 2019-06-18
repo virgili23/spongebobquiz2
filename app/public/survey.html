@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Friend Finder</title>
+  <title>Spongebob Quiz</title>
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -10,26 +10,134 @@
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="
   sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+  <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <!-- Quicksand -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500&display=swap" rel="stylesheet">
+
+  <style>
+
+  * {
+    font-family: 'Quicksand';
+  }
+
+.btn {
+    /* justify-content: space-around; */
+    margin: auto;
+    color: green;
+    border: 3px green solid;
+    background: white;
+    width: 30vw;
+
+}
+.btn:hover {
+    background: green;
+    border: 3px green solid;
+
+}
+
+p a {
+    /* position: absolute; */
+    background: white;
+    padding: 0.5% 1%;
+    border-radius: 5%;
+    border: 3px gray solid;
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    -webkit-justify-content: center; /* Safari 6.1+ */
+    /* justify-content: space-between; */
+    top: 90%;
+}
+.container {
+    background: white;
+    margin-top: 2%;
+    border-radius: 1%;
+}
+body {
+    background: #3671BF;
+}
+h2 {
+    text-align: center;
+    padding: 2%;
+}
+
+
+/* Modals */
+
+.modal.custom .modal-dialog {
+    /* width: 70%; */
+    /* background: yellow; */
+    /* margin:0 auto; */
+}
+.modal-header {
+    border-bottom: none;
+}
+
+.modal.custom .modal-content {
+    /* left: 20%; */
+    right: 10%;
+    /* position: absolute; */
+    width: 110%;
+    background: white;
+}
+.modal.custom .modal-content .modal-body p {
+    margin: 2% 5% 2% 5%;
+    word-wrap: break-word;
+    /* background: blue; */
+    font-size: 1.2em;
+}
+
+/* image */
+#matchImg {
+    width: 25vw;
+    /* margin-left: 8%; */
+    /* margin-right: 1%; */
+    margin: -1% 1% 5% 16%;
+}
+.modal-bottom {
+    /* background: blue; */
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.modal-bottom a {
+    
+    padding: 1% 3%;
+    text-decoration: none;
+    color: green;
+    border: 3px green solid;
+    border-radius: 3px;
+    background: white;
+    
+}
+.modal-bottom a:hover {
+    color: white;
+    background: green;
+    border: 3px green solid;
+}
+  
+  </style>
+
 </head>
 <body>
 
 <div class="container">
-    <h2>Survey Questions</h2>
-    <hr>
+    <h2>Which Spongebob Character Are You?</h2>
 
-    <h3><strong>About You</strong></h3>
-    <h4>Name (required)</h4>
-    <input type="text" name="" id="name" class="form-control" required>
 
-    <h4>Link to Photo Image (required)</h4>
-    <input type="text" name="" id="photo" class="form-control" required>
+    <!-- <h3><strong>About You</strong></h3> -->
+    <!-- <h4>Name (required)</h4> -->
+    <!-- <input type="text" name="" id="name" class="form-control" required> -->
 
-    <hr>
+    <!-- <h4>Link to Photo Image (required)</h4> -->
+    <!-- <input type="text" name="" id="photo" class="form-control" required> -->
+<br><br><br>
+   
 
-    <h3><strong>Question 1</strong></h3>
-    <h4>You love waking up in the morning.</h4>
+    <h3><strong>You love waking up in the morning.</strong></h3>
     <select data-placeholder="" class="chosen-select" id="q1">
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -38,9 +146,8 @@
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
     </select>
-
-    <h3><strong>Question 2</strong></h3>
-    <h4>You always look for the positive side in life.</h4>
+<br><br>
+    <h3><strong>You always look for the positive side in life.</strong></h3>
     <select data-placeholder="" class="chosen-select" id="q2">
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -49,9 +156,8 @@
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
     </select>
-
-    <h3><strong>Question 3</strong></h3>
-    <h4>You like your job.</h4>
+<br><br>
+    <h3><strong>You love your job.</strong></h3>
     <select data-placeholder="" class="chosen-select" id="q3">
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -60,10 +166,29 @@
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
     </select>
-
-    <h3><strong>Question 4</strong></h3>
-    <h4>You are quite the intellectual.</h4>
+<br><br>
+    <h3><strong>You are quite the intellectual.</strong></h3>
     <select data-placeholder="" class="chosen-select" id="q4">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+    </select>
+<br><br>
+    <h3><strong>You are adventurous</strong></h3>
+    <select data-placeholder="" class="chosen-select" id="q5">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+    </select>
+<br><br>
+    <h3><strong>Having a great career is one of the most important goals in life.</strong></h3>
+    <select data-placeholder="" class="chosen-select" id="q6">
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -76,7 +201,6 @@
     <br>
 
     <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
-        <i class="fa fa-check-circle" aria-hidden="true"></i>
         Submit
     </button>
 
@@ -84,32 +208,40 @@
 
     <div class="footer">
         <div class="container">
-            <p><a href="#">API Friends List</a> | <a href="https://github.com/virgili23/spongebobquiz2" target="_blank">Github Repo</a></p>
+            <!-- <p><a href="https://github.com/virgili23/spongebobquiz2" target="_blank">Github Repo</a></p> -->
         </div>
     </div>
 </div>
 
    <!-- Modal -->
-   <div id="resultsModal" class="modal fade" role="dialog">
+   <div id="resultsModal" class="modal custom fade" role="dialog">
         <div class="modal-dialog">
       
           <!-- Modal content-->
           <div class="modal-content">
             <div class="modal-header">
+                    <h3 class="modal-title">You Are...</h3>
               <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h3 class="modal-title">You Are...</h3>
+              
             </div>
             <div class="modal-body">
-              <h2 id="matchName"></h2>
-              <img id="matchImg"src="https://media.giphy.com/media/rjN9e4I4mgspy/giphy.gif" alt="">
+              <h2 id="matchName">Squidward</h2>
+              <img id="matchImg"src="https://media.giphy.com/media/EhwFIP584mIBa/giphy.gif" alt="">
+                <p id="description">
+                    Your job isn't the best part of your life, but outside of that, you are very intellectual in your own way.
+                </p>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+            <div class="modal-bottom">
+               
+                    <a href="/">Retry?</a>
+                
             </div>
+           
           </div>
       
         </div>
-</div>
+    </div>
 
 
 
@@ -117,46 +249,21 @@
 
 <script type="text/javascript">
     
-    $("#submit").on("click", function() {
+   $("#submit").on("click", function() {
 
-        // The logic on how to pick the best character is on a post request. 
-        // Now we must post the results into the post request as a json from here
-
-        // Validate each form for completion
-        function validateForm() {
-
-            var isValid = true;
-
-            $(".form-control").each(function() {
-
-                if($(this).val() === "") {
-                    isValid = false;
-                }
-            });
-
-            $(".chosen-select").each(function() {
-
-                if($(this).val() === "") {
-                    isValid = false;
-                }
-            });
-
-            return isValid;
-        }
-
-// If all required fields are filled
-
-        if (validateForm()) {
             // Create an object for the user's data
             var userData = {
-                name: $("#name").val(),
-                photo: $("#photo").val(),
+                // name: $("#name").val(),
+                // photo: $("#photo").val(),
                 scores: [
                     $("#q1").val(),
                     $("#q2").val(),
                     $("#q3").val(),
-                    $("#q4").val()
-                ]
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val()
+                ],
+                 desc: "Your job isn't the best part of your life, but outside of that, you are very intellectual in your own way."
             };
 
             // Grab the url of the website
@@ -169,16 +276,16 @@
                 // Grab the result from the AJAX post
                 $("#matchName").text(data.name);
                 $("#matchImg").attr("src", data.photo);
+                $("#description").text(data.desc);
                 // Toggle the Modal
                 $("#resultsModal").modal("toggle");
                 
             });
-        }
-        else {
-            alert("Please fill out all fields before submitting");
-        }
-        return false;
-    });
+    }); 
+
+    // $("#submit").on("click", function() {
+    //     $("#resultsModal").modal("toggle");
+    // });
 </script>
 </body>
 
